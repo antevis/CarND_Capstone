@@ -60,7 +60,7 @@ Despite the model is relatively lightweight and aimed for efficient inference on
 
 ![alt text][screen]
 
-VM meets the recommended configuration specs: **`2 CPUs + 4GB RAM`**
+The virtual machine meets the recommended configuration specs: **`2 CPUs + 4GB RAM`**
 
 As the project due is in 1 day, I submit "as is." Even if it wouldn't pass, hope for a meaningful feedback from the
 reviewer.
