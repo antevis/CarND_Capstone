@@ -41,9 +41,7 @@ Traffic light classification utilizes [off-the-shelf trained SSD Mobilenet COCO 
 * classes
 * number of detections (that is, length of the above)
 
-![alt text][elephant]
-![alt text][red]
-![alt text][green]
+![alt text][elephant] ![alt text][red] ![alt text][green]
 
 Traffic sign bounding boxes look like this:
 
