@@ -56,7 +56,7 @@ To do that, I crop the detected bounding box to **the center of the top quadrant
 
 It can be seen that minimum average red channel intensity among the examined detections is **`205.3095`** (in a range of **`0÷255`**). So I deem **`200`** to be a **`threshold`** value for the detection to be classified as **`RED`**.
 
-Despite the model is relatively lightweight and aimed for efficient inference on mobile devices, my current local hardware setup **([Mid-2014 3.0GHz dual-core Intel Core i7 16GB laptop](https://support.apple.com/kb/SP703?locale=en_US&viewlocale=en_US) + Lubunu VM with ROS Kinetic)** is apparently unable to cope with the task. The vehicle successfully starts, stops on a **`red`** and proceeds on a **`green`** in case of **pseudo-"detections"** consumed from the **`/vehicle/traffic_lights`**, but fails to do so based on the data from the  **`tl_classifier`**, while the latter provides a stream of correct predictions:
+Despite the model is relatively lightweight and aimed for efficient inference on mobile devices, my current local hardware setup **([Mid-2014 3.0GHz dual-core Intel Core i7 16GB laptop](https://support.apple.com/kb/SP703?locale=en_US&viewlocale=en_US) + Lubunu VM with ROS Kinetic)** is apparently unable to cope with the task. The vehicle successfully starts, stops on a **`red`** and proceeds on a **`green`** in case of **pseudo-"detections"** consumed from the **`/vehicle/traffic_lights`** topic, but fails to do so based on the data from the  **`tl_classifier`**, while the latter provides a stream of correct predictions:
 
 ![alt text][screen]
 
