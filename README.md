@@ -2,7 +2,7 @@
 
 [elephant]: ./imgs/detection_elephant.png "elephant"
 [red]: ./imgs/detection_red.png "red"
-[green]: ./imgs/detection_red.png "green"
+[green]: ./imgs/detection_green.png "green"
 [crop0]: ./imgs/crop0.png "crop"
 [crop1]: ./imgs/crop1.png "crop"
 [crop2]: ./imgs/crop2.png "crop"
