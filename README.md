@@ -35,7 +35,7 @@
 ### Self-Driving Car Engineer Nanodegree Program
 
 Traffic light classification utilizes [off-the-shelf trained SSD Mobilenet COCO model](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz) available at
-[Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md#tensorflow-detection-model-zoo). The model detects 80 classes of objects, including traffic lights, and for each input image outputs 3 arrays and one scalar:
+[Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md#tensorflow-detection-model-zoo). The model detects 80 classes of objects, including traffic lights, and for each input image outputs 3 arrays and one scalar value:
 * bounding boxes
 * scores
 * classes
