@@ -41,7 +41,6 @@ class TLClassifier(object):
         :param bbox: crop values (relative)
         :return: image_np cropped to the bounding box
         """
-
         im_height, im_width = image_np.shape[0], image_np.shape[1]
 
         y1 = int(im_height * bbox[0])
@@ -95,9 +94,9 @@ class TLClassifier(object):
             red_avg = np.average(roi[:, :, 0])
 
             if red_avg > 200:
-                print("   RED detected")
+                # print("   RED detected")
                 return TrafficLight.RED
 
-        print("no RED detected")
+        # print("no RED detected")
         return TrafficLight.UNKNOWN
         # return TrafficLight.RED

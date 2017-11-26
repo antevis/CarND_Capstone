@@ -28,8 +28,6 @@ class WayPointsManager():
         self.wps_data = None
         self.sl_data = stop_line_coords
 
-
-
         self.stopLine_tree = KDTree(self.sl_data)
 
         self.sl_wp_indices = {}
@@ -48,9 +46,9 @@ class WayPointsManager():
 
             """
             Adjustment to the vehicle's body length.
-            Might've been complicated by introducing vehicle's heading.
+            Might've been complicated further by introducing vehicle's heading.
 
-            May seem expensive but performed once."""
+            May seem computationally expensive but performed once."""
             for sl_idx, wp_idx in self.sl_wp_indices.items():
 
                 wp_coord = self.wps_data[wp_idx]
@@ -72,8 +70,8 @@ class WayPointsManager():
 
                 self.sl_data[sl_idx] = [globalX, globalY]
 
-            # Re-assemble the stop line - waypoint lookup again with according to adjusted stop line waypoints.
-            # The whole of the above might be re-factored and optimized, but I am not in that mood.
+            # Re-assemble the stop line - waypoint lookup table again according to adjusted stop line waypoints.
+            # The whole of the above might be refactored and optimized, but I am not in the mood.
             self.sl_wp_indices = {i: self.get_proximal(self.sl_data[i], self.wps_tree)[1]
                                   for i in range(len(self.sl_data))}
 

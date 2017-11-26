@@ -95,8 +95,7 @@ class WaypointUpdater(object):
 
 
     def pose_cb(self, msg):
-        # if self.currPos != msg:
-            self.currPos = msg
+        self.currPos = msg
 
     def traffic_cb(self, msg):
         self.tl_ws_idx = msg.data
