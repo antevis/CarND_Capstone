@@ -48,20 +48,20 @@ Traffic sign bounding boxes look like this:
 ![alt text][crop0] ![alt text][crop1] ![alt text][crop2] ![alt text][crop3] ![alt text][crop4] ![alt text][crop5]
 ![alt text][crop6] ![alt text][crop7] ![alt text][crop8] ![alt text][crop9] ![alt text][crop10] ![alt text][crop11]
 
-As the model doesn't distinguish traffic lights states, additional classification required to discern `REDs`.
+As the model doesn't distinguish traffic lights states, additional classification required to discern **`REDs`**.
 To do that, I crop the detected bounding box to the center of the top quadrant and perform primitive average red channel
 intensity evaluation:
 
 ![alt text][roi0]![alt text][roi1]![alt text][roi2]![alt text][roi3]![alt text][roi4]![alt text][roi5]![alt text][roi6]
 ![alt text][roi7]![alt text][roi8]![alt text][roi9]![alt text][roi10]![alt text][roi11]![alt text][roi12]
 
-It can be seen that minimum average red channel intensity among the examined detections is `205.3095` (out of `255`),
-So I deem `200` as a threshold value for the detection to be classified as `RED`.
+It can be seen that minimum average red channel intensity among the examined detections is **`205.3095`** (out of **`255`**),
+So I deem **`200`** as a threshold value for the detection to be classified as **`RED`**.
 
-Despite the model is relatively lightweight and aimed for efficient inference on mobile devices, my current local hardware setup `(Mid-2014 3.0GHz dual-core Intel Core i7 16GB laptop with Lubunu VM with ROS)` is apparently unable to cope with the task. The vehicle successfully starts, stops on a `red` and proceeds on a `green` in case of **pseudo**-"detections" consumed from the `/vehicle/traffic_lights`, but fails to do so based on the data from the  `tl_classifier`, while it provides a stream of correct predictions:
+Despite the model is relatively lightweight and aimed for efficient inference on mobile devices, my current local hardware setup **`(Mid-2014 3.0GHz dual-core Intel Core i7 16GB laptop with Lubunu VM with ROS)`** is apparently unable to cope with the task. The vehicle successfully starts, stops on a `red` and proceeds on a `green` in case of **pseudo-"detections"** consumed from the **`/vehicle/traffic_lights`**, but fails to do so based on the data from the  **`tl_classifier`**, while it provides a stream of correct predictions:
 ![alt text][screen]
 
-VM meets the recommended configuration: `2 CPUs + 4GB RAM`
+VM meets the recommended configuration: **`2 CPUs + 4GB RAM`**
 
 As the project due is in 1 day, I submit "as is." Even if it wouldn't pass, hope for a meaningful feedback from the
 reviewer.
