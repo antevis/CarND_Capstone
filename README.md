@@ -55,7 +55,7 @@ intensity evaluation:
 ![alt text][roi0]![alt text][roi1]![alt text][roi2]![alt text][roi3]![alt text][roi4]![alt text][roi5]![alt text][roi6]
 ![alt text][roi7]![alt text][roi8]![alt text][roi9]![alt text][roi10]![alt text][roi11]![alt text][roi12]
 
-It can be seen that minimum average red channel intensity among the examined detections is `209.3095` (out of `255`),
+It can be seen that minimum average red channel intensity among the examined detections is `205.3095` (out of `255`),
 So I deem `200` as a threshold value for the detection to be classified as `RED`.
 
 Despite the model is relatively lightweight and aimed for efficient inference on mobile devices, my current local hardware setup `(Mid-2014 3.0GHz dual-core Intel Core i7 16GB laptop with Lubunu VM with ROS)` is apparently unable to cope with the task. The vehicle successfully starts, stops on a `red` and proceeds on a `green` in case of **pseudo**-"detections" consumed from the `/vehicle/traffic_lights`, but fails to do so based on the data from the  `tl_classifier`, while it provides a stream of correct predictions:
