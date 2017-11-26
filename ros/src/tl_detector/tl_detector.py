@@ -186,7 +186,6 @@ class TLDetector(object):
         Returns:
             int: ID of traffic light color (specified in styx_msgs/TrafficLight)
         """
-        # if not self.light_classifier.busy and self.camera_image:
         if self.camera_image:
 
             # cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
@@ -194,7 +193,6 @@ class TLDetector(object):
             np_image = self.bridge.imgmsg_to_cv2(img_msg=self.camera_image,
                                                  desired_encoding="passthrough")
             #Get classification
-            # self.light_classifier.busy = True
             return self.light_classifier.get_classification(np_image)
         else:
             return self.state
@@ -212,8 +210,8 @@ class TLDetector(object):
 
             if tl_ahead:
 
-                # state = self.get_light_state()  # Detection using TensorFlow model.
-                state = self.tls[tl_idx].state  # pseudo "Detection" from /vehicle/traffic_lights topic
+                state = self.get_light_state()  # Detection using TensorFlow model.
+                # state = self.tls[tl_idx].state  # pseudo "Detection" from /vehicle/traffic_lights topic
 
                 if state == TrafficLight.RED:
                     light_wp_idx = sl_wp_idx
