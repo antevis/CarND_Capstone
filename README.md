@@ -49,8 +49,7 @@ Traffic sign bounding boxes look like this:
 ![alt text][crop6] ![alt text][crop7] ![alt text][crop8] ![alt text][crop9] ![alt text][crop10] ![alt text][crop11]
 
 As the model doesn't distinguish traffic lights states, additional classification required to discern **`REDs`**.
-To do that, I crop the detected bounding box to **the center of the top quadrant** and perform primitive average red channel
-intensity evaluation:
+To do that, I crop the detected bounding box to **the center of the top quadrant** and perform primitive **average red channel intensity evaluation**:
 
 ![alt text][roi0]![alt text][roi1]![alt text][roi2]![alt text][roi3]![alt text][roi4]![alt text][roi5]![alt text][roi6]
 ![alt text][roi7]![alt text][roi8]![alt text][roi9]![alt text][roi10]![alt text][roi11]![alt text][roi12]
